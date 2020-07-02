@@ -10,7 +10,7 @@
   %body
     %header.header
       .header__title
-        = link_to "PiNpOn", root_path, class: "header__title--text"
+        = link_to "PiNpOnPaN", root_path, class: "header__title--text"
       .header__right
         - if user_signed_in?
           = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "header__right--btn"

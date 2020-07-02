@@ -1,0 +1,45 @@
+.contents {
+  height: calc(100% - 60px);
+  .devise {
+    margin: 30px auto;
+    width: 300px;
+    padding: 40px 40px 20px 40px;
+    background-color: #fafafa;
+    border-radius: 10px;
+    border: solid 3px #98DBC6;
+    h2 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #E6D72A;
+      margin-bottom: 30px;
+    }
+    .field {
+      font-weight: bold;
+      color: #5BC8AC;
+      margin: 10px;
+      input {
+        font-weight: normal;
+      }
+    }
+    .actions {
+      text-align: center;
+      input {
+        width: 80px;
+        height: 40px;
+        border: none;
+        background-color: #E6D72A;
+        color: #fafafa;
+        font-weight: bold;
+        border-radius: 10px;
+      }
+    }
+    .link_tab {
+      margin-top: 20px;
+      margin-bottom: auto;
+      a {
+        text-decoration: none;
+        color: #919191;
+      }
+    }
+  }
+}
