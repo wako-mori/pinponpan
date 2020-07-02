@@ -1,0 +1,24 @@
+.header {
+  height: 60px;
+  padding: 10px;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: space-between;
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    a {
+      color: #f18D9E;
+    }
+  }
+  &__right {
+    margin-left: 20px;
+    margin-top: 30px;
+    a {
+      color: #5BC8AC;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}
