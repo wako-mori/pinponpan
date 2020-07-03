@@ -4,4 +4,16 @@
     %br/
     まずはリフレッシュする時間を入力してください
 
+  .timer__input
+    %form{name: "timer"}
+      %input{type: "text", value: ""}>/
+      分
+      %input{type: "text", value: ""}>/
+      秒
+      %br/
+      %input{onclick: "cntStart()", type: "button", value: "スタート"}/
+      %input{onclick: "cntStop()", type: "button", value: "ストップ"}/
+
+
+
   = link_to "Start", '/posts/new', class: "start__btn"
