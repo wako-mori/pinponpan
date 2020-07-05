@@ -7,12 +7,6 @@ function cntStart() {
   timer1 = setInterval("countDown()",1000);
 }
 
-// タイマー停止関数
-function cntStop() {
-  document.timer.elements[2].disabled=false;
-  crearInterval(timer1);
-}
-
 // カウントダウン関数
 function countDown() {
   var min=document.timer.elements[0].value;
@@ -46,6 +40,9 @@ function tmWrite(int) {
     document.timer.elements[0].value=Math.floor(int/60);
     //残り秒数はintを60で割った余り
     document.timer.elements[1].value=int % 60;
+
+    var time_remaining = document.timer.elements[0].value + ":" + document.timer.elements[1].value;
+    document.getElementById('time_remaining').innerHTML = time_remaining;
   }
 }
 
@@ -55,4 +52,5 @@ function reSet() {
   document.timer.elements[1].value="0";
   document.timer.elements[2].disabled=false;
   clearInterval(timer1);
+  time_remaining.style.display = "none";
 }
