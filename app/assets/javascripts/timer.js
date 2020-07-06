@@ -9,27 +9,27 @@ function cntStart() {
 
 // カウントダウン関数
 function countDown() {
-  var min=document.timer.elements[0].value;
-  var sec=document.timer.elements[1].value;
+  var min = document.timer.elements[0].value;
+  var sec = document.timer.elements[1].value;
 
-  if((min=="")&&(sec=="")) {
+  if((min == "")&&(sec == "")) {
     alert("時間を設定してください！");
     reSet();
   }
   else {
-    if(min=="")min=0;
-    min=parseInt(min);
+    if(min == "")min = 0;
+    min = parseInt(min);
 
-    if(sec=="")sec=0;
-    sec=parseInt(sec);
+    if(sec == "")sec = 0;
+    sec = parseInt(sec);
 
     tmWrite(min*60+sec-1);
   }
 }
 
 // 残り時間を書き出す関数
-function tmWrite(int) {
-  int=parseInt(int);
+function tmWrite(int) { 
+  int = parseInt(int);
 
   if(int <= 0) {
     reSet();
@@ -37,13 +37,21 @@ function tmWrite(int) {
   }
   else {
     //残り分すうはintを60で割って切り捨てる
-    document.timer.elements[0].value=Math.floor(int/60);
+    document.timer.elements[0].value = Math.floor(int/60);
     //残り秒数はintを60で割った余り
-    document.timer.elements[1].value=int % 60;
+    document.timer.elements[1].value = int % 60;
 
-    var time_remaining = document.timer.elements[0].value + ":" + document.timer.elements[1].value;
-    document.getElementById('time_remaining').innerHTML = time_remaining;
+    time_remaining = document.getElementById('time_remaining');
+    time_remaining.innerHTML = Math.floor(int/60) + ":" + int % 60;
   }
+}
+
+function goServlet() {
+  const p1 = document.getElementById('timer');
+  p1.style.display = "none";
+
+  const p2 = document.getElementById('game');
+  p2.style.display = "block";
 }
 
 // フォームを初期状態に戻す(リセット)関数
@@ -54,3 +62,4 @@ function reSet() {
   clearInterval(timer1);
   time_remaining.style.display = "none";
 }
+
