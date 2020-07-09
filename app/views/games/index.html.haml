@@ -1,0 +1,17 @@
+.start__view
+
+  #timer.timer__input
+    さぁ！リフレッシュをしましょう♪
+    %br/
+    まずはリフレッシュする時間を入力してください
+
+    %form{name: "timer"}
+      %input{type: "text", value: ""}>/
+      分
+      %input{type: "text", value: ""}>/
+      秒
+      %br/
+      %input{onclick: "cntStart(); goServlet()", type: "button", value: "スタート"}/
+
+  #game.game__select
+    = render "posts/game"

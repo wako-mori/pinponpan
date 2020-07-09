@@ -1,0 +1,14 @@
+.question__input
+  .question__input-message
+    タイピングの問題を追加しましょう♪ 
+    %br/
+    あなたの好きな言葉、元気の出る言葉を追加し、
+    %br/
+    リフレッシュタイムでモチベーションをあげましょう！！
+
+  .question__input-text
+    = form_for @quest do |f|
+      = f.text_field :type_quest, {class: "input-quest", placeholder: "例）笑う門には福来る"}
+  
+  .question__input-btn
+    %input{type: "submit", value: "登録", class: "submit"}
