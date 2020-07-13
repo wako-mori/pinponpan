@@ -10,5 +10,5 @@
     = form_for @quest do |f|
       = f.text_field :type_quest, {class: "input-quest", placeholder: "例）笑う門には福来る"}
   
-  .question__input-btn
-    %input{type: "submit", value: "登録", class: "submit"}
+      .question__input-btn
+        = f.submit "登録", class:"commit-btn"
