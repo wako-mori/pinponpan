@@ -1,17 +1,9 @@
-.start__view
+.index__view
+  .select
+    .input__problem
+    タイピング問題の追加
+    = link_to "追加", new_post_path
 
-  #timer.timer__input
-    さぁ！リフレッシュをしましょう♪
-    %br/
-    まずはリフレッシュする時間を入力してください
-
-    %form{name: "timer"}
-      %input{type: "text", value: ""}>/
-      分
-      %input{type: "text", value: ""}>/
-      秒
-      %br/
-      %input{onclick: "cntStart(); goServlet()", type: "button", value: "スタート"}/
-
-  #game.game__select
-    ゲーム
+    .game__type
+    タイピングゲーム
+    = link_to "スタート", games_path
